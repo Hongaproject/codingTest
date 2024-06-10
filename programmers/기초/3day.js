@@ -37,3 +37,55 @@ for(let i = 0; i<k; i++){
 }
 
 return answer1;
+
+my_string.repeat(k);
+
+// 연산 ⊕는 두 정수에 대한 연산으로 두 정수를 붙여서 쓴 값을 반환합니다. 예를 들면 다음과 같습니다.
+// 12 ⊕ 3 = 123
+// 3 ⊕ 12 = 312
+// 양의 정수 a와 b가 주어졌을 때, a ⊕ b와 b ⊕ a 중 더 큰 값을 return 하는 solution 함수를 완성해 주세요.
+// 단, a ⊕ b와 b ⊕ a가 같다면 a ⊕ b를 return 합니다.
+
+// 입출력 예
+// a	b	result
+// 9	91	991
+// 89	8	898
+let c = Number(String(a) + String(b));
+let d = Number(String(b) + String(a));
+
+return c >= d ? c : d
+
+let qaz = ''
+let q = '' + a + b
+let w = '' + b + a
+qaz = Math.max(q,w);
+return qaz;
+
+return Math.max(`${a}${b}`,`${a}${b}`);
+
+// toString과 String의 차이점 
+// String 어떤 형태든 문자로 변환
+// toString은 null, undefind값을 형 변환시 오류가 나타난다. 
+
+// 두 수의 연산값 비교하기
+// 연산 ⊕는 두 정수에 대한 연산으로 두 정수를 붙여서 쓴 값을 반환합니다. 예를 들면 다음과 같습니다.
+// 12 ⊕ 3 = 123
+// 3 ⊕ 12 = 312
+// 양의 정수 a와 b가 주어졌을 때, a ⊕ b와 2 * a * b 중 더 큰 값을 return하는 solution 함수를 완성해 주세요.
+// 단, a ⊕ b와 2 * a * b가 같으면 a ⊕ b를 return 합니다.
+
+// 입출력 예
+// a	b	result
+// 2	91	364
+// 91	2	912
+
+let c = Number(String(a)+String(b));
+let d = Number(2*a*b);
+
+return c >= d ? c : d;
+
+return Math.max(`${a}${b}`,2*a*b);
+
+
+
+
