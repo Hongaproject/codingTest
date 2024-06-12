@@ -14,6 +14,11 @@ console.log('b =' + Number(input[1]));
 // 출력 stringstringstringstringstring
 console.log(str.repeat(n));
 
+for(let i = 1; i<n; i++){
+    str += input[0]
+}
+console.log(str);
+
 // repeat 메소드는 문자열 반복때 사용이 됨.
 
 // 대소문자 바꿔서 출력하기
