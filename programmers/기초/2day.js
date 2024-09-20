@@ -69,8 +69,10 @@ console.log(n % 2 == 0 ? `${n} is even` : `${n} is odd`);  // 삼항연산자로
 // "Program29b8UYP"	"merS123"	7	"ProgrammerS123"
 // 입출력 예제 1번의 my_string에서 인덱스 2부터 overwrite_string의 길이만큼에 해당하는 부분은 "11oWor1"이고 이를 "lloWorl"로 바꾼 "HelloWorld"를 return 합니다.
 
-let answer = my_string.split("");
-answer.splice(s, overwrite_string.length, overwrite_string)  // Array.splice(start: number, deleteCount?: number | undefined): T[]
+let answer = my_string.split(""); // my_string = "HelloWorld"라면 answer = ['H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd']
+answer.splice(s, overwrite_string.length, overwrite_string)  // splice() 메서드는 배열의 요소를 추가, 제거, 또는 교체하는 기능, splice(시작점, 삭제할부분, 추가할부분, 추가할부분, ...)
+// my_string = "HelloWorld", overwrite_string = "lloWorl", s = 2라면, splice(2, 7, "lloWorl")가 실행됩니다.
+// 인덱스 2부터 7개의 문자를 "lloWorl"로 대체합니다.
 return answer.join("");
 
 // 코드 해석 문자열을 split로 한 개씩 쪼개고 splice를 사용해서 코드를 삭제해주고 join을 통해 붙혀준다. 
