@@ -4,8 +4,10 @@
 // str1	str2	result
 // "aaaaa"	"bbbbb"	"ababababab"
 let answer = '';
-for(let i = 0; i<str1.length; i++){
-    answer += str1[i]+str2[i];
+for(let i = 0; i<str1.length; i++){ // str1의 길이만큼 반복 
+    answer += str1[i] + str2[i];  // str1[i]와 str2[i]를 차례로 결합하여 answer에 추가
+    // 첫 번째 반복에서 str1[0] ('a')와 str2[0] ('b')가 결합되어 answer는 'ab'가 됩니다.
+    // 두 번째 반복에서는 str1[1] ('a')와 str2[1] ('b')가 결합되어 answer는 'abab'가 됩니다.
 }
 return answer
 
@@ -55,13 +57,20 @@ let d = Number(String(b) + String(a));
 
 return c >= d ? c : d
 
-let qaz = ''
-let q = '' + a + b
-let w = '' + b + a
-qaz = Math.max(q,w);
-return qaz;
+function solution(a, b) {
+    var answer = 0;
+    // ''을 붙이면 자바스크립트는 a와 b를 문자열로 간주하고 연결하게 됩니다. 그렇지 않으면, 두 숫자를 더하는 산술 연산이 되어 문제에서 요구하는 결과와 달라집니다.
+    let ab = '' + a + b; // a와 b를 문자열로 이어붙임 
+    let ba = '' + b + a; // b와 a를 문자열로 이어붙임
+    answer = Math.max(ab,ba); // ab와 ba 중 더 큰 값을 구함 -> Math.max()는 두 값 중 더 큰 값을 반환하는 함수입니다. 이때 중요한 점은 숫자가 아니라 문자열끼리 비교가 이루어집니다.
+    return answer;
+}
 
-return Math.max(`${a}${b}`,`${a}${b}`);
+function solution(a, b) {
+    return Math.max(Number(`${a}${b}`), Number(`${b}${a}`)) // 이 코드는 숫자로 비교하는 코드
+}
+
+return Math.max(`${a}${b}`,`${b}${a}`); // 문자열로 비교하는 코드 
 
 // toString과 String의 차이점 
 // String 어떤 형태든 문자로 변환
