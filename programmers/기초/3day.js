@@ -73,7 +73,7 @@ function solution(a, b) {
 return Math.max(`${a}${b}`,`${b}${a}`); // 문자열로 비교하는 코드 
 
 // toString과 String의 차이점 
-// String 어떤 형태든 문자로 변환
+// String 어떤 형태든 문자로 
 // toString은 null, undefind값을 형 변환시 오류가 나타난다. 
 
 // 두 수의 연산값 비교하기
@@ -95,6 +95,13 @@ return c >= d ? c : d;
 
 return Math.max(`${a}${b}`,2*a*b);
 
-
+function solution(a, b) {
+    var answer = 0;
+    // ''을 붙이면 자바스크립트는 a와 b를 문자열로 간주하고 연결하게 됩니다. 그렇지 않으면, 두 숫자를 더하는 산술 연산이 되어 문제에서 요구하는 결과와 달라집니다.
+    let ab = '' + a + b; // a와 b를 문자열로 이어붙임 
+    let ba = 2 * b * a; // b와 a를 문자열로 이어붙임
+    answer = Math.max(ab,ba); // ab와 ba 중 더 큰 값을 구함 -> Math.max()는 두 값 중 더 큰 값을 반환하는 함수입니다. 이때 중요한 점은 숫자가 아니라 문자열끼리 비교가 이루어집니다.
+    return answer;
+}
 
 
