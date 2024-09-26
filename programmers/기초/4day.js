@@ -71,6 +71,43 @@ function solution(ineq, eq, n, m) {
     return 0
 }
 
+function solution(ineq, eq, n, m) {
+
+    let result = 0;
+
+    if(eq === "=") {
+        if(ineq === ">") {
+            if(n >= m) {
+                result = 1;
+            } else {
+                result = 0;
+            }
+        } else if(ineq === "<") {
+            if(n <= m) {
+                result = 1;
+            } else {
+                result = 0;
+            }
+        }
+    } else if(eq === "!") {
+        if(ineq === ">") {
+            if(n > m) {
+                result = 1;
+            } else {
+                result = 0;
+            }
+        } else if(ineq === "<") {
+            if(n < m) {
+                result = 1;
+            } else {
+                result = 0;
+            }
+        }
+    }
+    return result;
+}
+
+
 // flag에 따라 다른 값 반환하기
 // 두 정수 a, b와 boolean 변수 flag가 매개변수로 주어질 때, flag가 true면 a + b를 false면 a - b를 return 하는 solution 함수를 작성해 주세요.
 // 입출력 예 #1
@@ -83,5 +120,13 @@ function solution(a, b, flag) {
         return a + b
     } else {
         return a - b
+    }
+}
+
+function solution(a, b, flag) {
+    if(flag === true){
+        return a + b;
+    } else {
+        return a - b;
     }
 }
