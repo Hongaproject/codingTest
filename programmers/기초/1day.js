@@ -40,6 +40,18 @@ str.forEach((v,index) => {
 })
 console.log(str.join("")); // 배열을 다시 문자열로 변환하여 출력
 
+let str = input[0].split("");
+    
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) {
+        str[i] = str[i].toLowerCase();
+    } else {
+        str[i] = str[i].toUpperCase();
+    }
+}
+    
+console.log(str.join(""));
+
 // toUpperCase(); 소문자를 대문자로 변환시켜줍니다.
 // toLowerCase(); 대문자를 소문자로 변환시켜줍니다.
 
